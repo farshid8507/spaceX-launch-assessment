@@ -1,0 +1,41 @@
+@blue-color: #13a2e8;
+
+.styled-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  &+label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    color: white;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  // Box.
+  &+label:before {
+    content: '';
+    margin-right: 10px;
+    margin-top: -3px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 1.2px solid white;
+    border-radius: 3px;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked+label:after {
+    background: url('../../../../assets/images/checkmark.svg') no-repeat;
+    content: '';
+    height: 18px;
+    width: 18px;
+    background-size: 18px;
+    position: absolute;
+    left: 1px;
+    top: 2px;
+  }
+}

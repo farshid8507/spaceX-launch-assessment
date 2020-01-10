@@ -1,0 +1,11 @@
+<div class="container">
+
+  <h1 class="col-xs-12 text-center text-white mt-5 mb-5">SpaceX Launches</h1>
+
+  <app-spacex-launches-header (selectedFilter)="setSelectedFilter($event)" 
+    (reloadList)="getSpaceXLaunchesData()">
+  </app-spacex-launches-header>
+
+  <app-spacex-launches-list [dataList]="spaceXDataList"></app-spacex-launches-list>
+
+</div>

@@ -1,0 +1,5 @@
+export const FILTERS = {
+    WITH_REDDIT: 'WITH REDDIT',
+    REUSED: 'REUSED',
+    LAND_SUCCESS: 'LAND SUCCESS'
+};

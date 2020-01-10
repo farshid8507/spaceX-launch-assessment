@@ -1,0 +1,41 @@
+<div class="launches-list-item row">
+  <div class="col-xs-12 col-sm-6 align-self-center">
+
+    <div class="row">
+
+      <img *ngIf="listItem?.links?.mission_patch_small; else placeholder" 
+        [src]="listItem?.links?.mission_patch_small" 
+        class="col-xs-6 col-sm-2 text-center mission-patch" alt="" />
+      <ng-template #placeholder>
+        <img src="assets/images/placeholder.png" class="col-xs-6 col-sm-2 text-center placeholder" alt=""/>
+      </ng-template>
+      
+      <span class="col-xs-6 col-sm-3 text-left">{{listItem?.rocket?.rocket_name}}</span>
+      <span class="col-xs-6 col-sm-3 text-left">{{listItem?.rocket?.rocket_type}}</span>
+      <span class="col-xs-6 col-sm-3 text-left">{{formatLaunchedDate(listItem?.launch_date_unix)}}</span>
+    </div>
+
+  </div>
+
+  <div class="col-xs-12 col-sm-6 align-self-center">
+
+    <div class="row">
+      <span class="col-xs-12 col-sm-8 text-left details">{{listItem?.details}}</span>
+      <span class="col-xs-6 col-sm-2 text-center">{{listItem?.flight_number}}</span>
+      
+      <ng-container *ngIf="listItem?.links?.article_link; else disableLink">
+        <span class="col-xs-6 col-sm-2 text-center">
+          <a href="javascript:void(0)" (click)="openArticle(listItem)" class="article-link"></a>
+        </span>
+      </ng-container>
+
+      <ng-template #disableLink>
+        <span class="col-xs-6 col-sm-2 text-center">
+          <i class="disable-article-link"></i>
+        </span>
+      </ng-template>
+  
+    </div>
+
+  </div>
+</div>

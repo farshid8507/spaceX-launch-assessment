@@ -1,0 +1,51 @@
+.launches-list-item {
+  height: 65px;
+  background-color: white;
+  margin-top: 6px;
+  border-radius: 8px;
+
+  .article-image() {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    background-size: 22px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  span {
+    padding: 0;
+    color: #474747;
+  }
+
+  .mission-patch {
+    padding: 0;
+    width: 22px;
+    height: 25px;
+    object-fit: contain;
+  }
+
+  .placeholder {
+    padding: 0;
+    height: 24px;
+    object-fit: cover;
+  }
+
+  .details {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .article-link {
+    background: url('../../../assets/images/link.svg') no-repeat;
+    .article-image()
+  }
+
+  .disable-article-link {
+    background: url('../../../assets/images/disable-link.svg') no-repeat;
+    .article-image()
+  }
+}
