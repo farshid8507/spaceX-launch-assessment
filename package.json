@@ -7,9 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod --base-href https://farshid8507.github.io/spaceX-launch-assessment"
   },
   "private": true,
+  "homepage": "https://farshid8507.github.io/spaceX-launch-assessment/",
   "dependencies": {
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
